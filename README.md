@@ -5,6 +5,21 @@ This repository accompanies the paper *Learning Personalized Treatment Decisions
 
 ## Overview
 
+Precision medicine offers the potential to tailor treatment strategies to individual patients based on their unique characteristics. However, leveraging clinical observational data for personalized treatment decisions poses significant challenges due to inherent biases and the high-dimensional nature of biological data.
+
+This study aims to model various types of treatment assignment biases, using mutual information to quantify their impacts on machine learning models for counterfactual prediction and biomarker identification. Unlike standard counterfactual benchmarks that rely on fixed treatment policies, this work explores the characteristics of observational treatment policies across different clinical settings. This approach helps in understanding how different biases affect model performance in predicting outcomes and identifying biomarkers.
+
+### Key Insights:
+- **Treatment Assignment Policies**: These policies vary based on clinical settings, influencing how treatment decisions are made. For instance, regulated environments like cancer care often have systematic treatment assignments initially but may become more variable as patient care progresses.
+- **Overlap Assumption Violation**: Observational data may violate the overlap assumption, where patients do not have an equal chance of receiving all treatment types. High-dimensional data exacerbates this issue, making it essential to identify when biases are impactful.
+- **Empirical vs. Synthetic Data**: Using both synthetic (e.g., TCGA data) and real-world datasets (e.g., CRISPR and drug screens from DepMap), the study emphasizes a more biologically realistic approach by incorporating empirical biological mechanisms.
+
+### Visual Illustration:
+Figure 1 below (from the associated paper) visually represents different clinical settings and their respective treatment assignment policies, highlighting the potential outcomes and the violations of the overlap assumption that complicate counterfactual prediction. The figure helps illustrate how selection biases impact treatment decision-making and predictive model development.
+
+![Figure 1](assets/bias_visualization.pdf)  <!-- Ensure the PDF is in the correct path -->
+
+
 Precision medicine promises tailored treatment strategies but faces challenges due to biases in clinical observational data and the complexity of biological data. This work models various treatment assignment biases and investigates their effects on machine learning models for counterfactual outcome prediction and biomarker identification.
 
 ### Key Features
