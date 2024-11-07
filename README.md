@@ -47,7 +47,7 @@ python 01_run_simulation_experiment.py -cn=config_AY_toy
 Modify parameters like `model_names` and `seeds` in the configuration files if needed.
 
 ### Optional Settings
-- Disable feature explainability evaluation by setting:
+Disable feature explainability evaluation by setting:
   ```yaml
   evaluate_explanations: false
   evaluate_prog_explanations: false
