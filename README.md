@@ -1,7 +1,7 @@
 
 # Learning Personalized Treatment Decisions in Precision Medicine
 
-This repository accompanies the paper *Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*, accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification. 
+This repository accompanies the paper [*Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*](https://arxiv.org/abs/2410.00509), accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification. 
 
 ## Overview
 
