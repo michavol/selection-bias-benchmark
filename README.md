@@ -10,8 +10,6 @@ Precision medicine offers the potential to tailor treatment strategies to indivi
 This study aims to model various types of treatment assignment biases, using mutual information to quantify their impacts on machine learning models for counterfactual prediction and biomarker identification. Unlike standard counterfactual benchmarks that rely on fixed treatment policies, this work explores the characteristics of observational treatment policies across different clinical settings. This approach helps in understanding how different biases affect model performance in predicting outcomes and identifying biomarkers.
 
 ### Contributions
-
-This study makes several significant contributions:
 - **Formalization and Quantification**: We formalize and quantify different types of treatment assignment biases induced by observational treatment policies and explain their relationships with clinical settings and biomarker types.
 - **Simulation and Analysis**: We systematically simulate different types of treatment selection policies and analyze their impact on the performance of various state-of-the-art counterfactual ML models using toy, semi-synthetic, and real-world outcomes.
 - **Novel Evaluation Approach**: We propose using in-vitro experiments for counterfactual evaluation, providing the community with a realistic evaluation approach characterized by empirical outcomes and multi-modal biological covariates.
