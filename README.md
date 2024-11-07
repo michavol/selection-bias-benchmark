@@ -9,24 +9,24 @@ Precision medicine offers the potential to tailor treatment strategies to indivi
 
 This study aims to model various types of treatment assignment biases, using mutual information to quantify their impacts on machine learning models for counterfactual prediction and biomarker identification. Unlike standard counterfactual benchmarks that rely on fixed treatment policies, this work explores the characteristics of observational treatment policies across different clinical settings. This approach helps in understanding how different biases affect model performance in predicting outcomes and identifying biomarkers.
 
-### Key Insights:
-- **Treatment Assignment Policies**: These policies vary based on clinical settings, influencing how treatment decisions are made. For instance, regulated environments like cancer care often have systematic treatment assignments initially but may become more variable as patient care progresses.
-- **Overlap Assumption Violation**: Observational data may violate the overlap assumption, where patients do not have an equal chance of receiving all treatment types. High-dimensional data exacerbates this issue, making it essential to identify when biases are impactful.
-- **Empirical vs. Synthetic Data**: Using both synthetic (e.g., TCGA data) and real-world datasets (e.g., CRISPR and drug screens from DepMap), the study emphasizes a more biologically realistic approach by incorporating empirical biological mechanisms.
+### Contributions
+
+This study makes several significant contributions:
+- **Formalization and Quantification**: We formalize and quantify different types of treatment assignment biases induced by observational treatment policies and explain their relationships with clinical settings and biomarker types.
+- **Simulation and Analysis**: We systematically simulate different types of treatment selection policies and analyze their impact on the performance of various state-of-the-art counterfactual ML models using toy, semi-synthetic, and real-world outcomes.
+- **Novel Evaluation Approach**: We propose using in-vitro experiments for counterfactual evaluation, providing the community with a realistic evaluation approach characterized by empirical outcomes and multi-modal biological covariates.
+- **Insights on Bias and Model Performance**: Our findings show that the type of bias significantly influences model performance. Importantly, the violation of the overlap assumption does not always harm prediction accuracy, highlighting the need for nuanced approaches in high-dimensional medical data.
+- **Model Differentiation**: The results indicate that models respond differently to various biases, providing critical insights for developing new methodologies and algorithms tailored to specific clinical settings.
+
+### Main Findings
+
+1. Addressing various types of treatment assignment biases, considering their strength (_β_) and relevance, is essential when learning from high-dimensional observational data.
+2. Counterfactual ML approaches can enhance the estimation of optimal treatment policies compared to traditional ML methods. However, there is still significant room for improvement in leveraging relevant biases in observational treatment policies.
 
 ### Visual Illustration:
 Figure 1 below (from the associated paper) visually represents different clinical settings and their respective treatment assignment policies, highlighting the potential outcomes and the violations of the overlap assumption that complicate counterfactual prediction. The figure helps illustrate how selection biases impact treatment decision-making and predictive model development.
 
 ![Figure 1](assets/bias_visualization.pdf)  <!-- Ensure the PDF is in the correct path -->
-
-
-Precision medicine promises tailored treatment strategies but faces challenges due to biases in clinical observational data and the complexity of biological data. This work models various treatment assignment biases and investigates their effects on machine learning models for counterfactual outcome prediction and biomarker identification.
-
-### Key Features
-- Simulates different treatment policies and biases.
-- Evaluates counterfactual prediction performance using synthetic, semi-synthetic (e.g., TCGA data), and real-world datasets (CRISPR and drug screens from DepMap).
-- Quantifies the effect of treatment selection bias on model performance.
-- Identifies and assesses biomarkers based on their predictive and prognostic capabilities.
 
 
 ## Setup and Installation
