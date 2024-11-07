@@ -1,7 +1,7 @@
 
 # Learning Personalized Treatment Decisions in Precision Medicine
 
-This repository accompanies the paper *Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*, accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification.
+This repository accompanies the paper [*Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*](https://arxiv.org/abs/2410.00509), accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification. 
 
 ## Overview
 
@@ -30,7 +30,7 @@ Precision medicine promises tailored treatment strategies but faces challenges d
 
 
 ## Setup and Installation
-
+If you have any questions about the implementation or content of the paper, feel free to reach out to me (michavol@ethz.ch).
 Ensure you are using Python 3.10.12. Follow these steps to set up the environment:
 
 ```bash
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 Update the `config_TY_tcga.yaml` and `config_TY_toy.yaml` files with the appropriate path to the repository code:
 
 ```yaml
-repo_path = PATH_TO_SUBMISSION_CODE
+repo_path = PATH_TO_REPO
 ```
 
 ## Running the Experiments
@@ -62,7 +62,7 @@ python 01_run_simulation_experiment.py -cn=config_AY_toy
 Modify parameters like `model_names` and `seeds` in the configuration files if needed.
 
 ### Optional Settings
-- Disable feature explainability evaluation by setting:
+Disable feature explainability evaluation by setting:
   ```yaml
   evaluate_explanations: false
   evaluate_prog_explanations: false
