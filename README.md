@@ -18,17 +18,6 @@ This study makes several significant contributions:
 - **Insights on Bias and Model Performance**: Our findings show that the type of bias significantly influences model performance. Importantly, the violation of the overlap assumption does not always harm prediction accuracy, highlighting the need for nuanced approaches in high-dimensional medical data.
 - **Model Differentiation**: The results indicate that models respond differently to various biases, providing critical insights for developing new methodologies and algorithms tailored to specific clinical settings.
 
-### Main Findings
-
-1. Addressing various types of treatment assignment biases, considering their strength (_β_) and relevance, is essential when learning from high-dimensional observational data.
-2. Counterfactual ML approaches can enhance the estimation of optimal treatment policies compared to traditional ML methods. However, there is still significant room for improvement in leveraging relevant biases in observational treatment policies.
-
-### Visual Illustration:
-Figure 1 below (from the associated paper) visually represents different clinical settings and their respective treatment assignment policies, highlighting the potential outcomes and the violations of the overlap assumption that complicate counterfactual prediction. The figure helps illustrate how selection biases impact treatment decision-making and predictive model development.
-
-![Figure 1](assets/bias_visualization.pdf)  <!-- Ensure the PDF is in the correct path -->
-
-
 ## Setup and Installation
 If you have any questions about the implementation or content of the paper, feel free to reach out to me (michavol@ethz.ch).
 Ensure you are using Python 3.10.12. Follow these steps to set up the environment:
