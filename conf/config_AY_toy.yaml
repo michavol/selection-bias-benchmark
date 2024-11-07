@@ -18,7 +18,7 @@ model_names: ["Torch_TARNet", "Torch_DragonNet", "Torch_DragonNet_2","Torch_Drag
 # ==============================================================================
 results_dictionary_prefix: "toy"
 dataset: "toy_data" 
-repo_path: "PATH_TO_SUBMISSION_CODE"
+repo_path: "PATH_TO_REPO"
 directory_path: "${repo_path}/data"
 results_path: "${repo_path}/results"
 # ==============================================================================
