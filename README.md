@@ -46,7 +46,7 @@ python 01_run_simulation_experiment.py -cn=config_AY_tcga
 python 01_run_simulation_experiment.py -cn=config_AY_toy
 ```
 
-Modify parameters like `model_names` and `seeds` in the configuration files if needed.
+Modify parameters like `model_names` and `seeds` in the configuration files if needed. The results can be found in the `results` directory specified in `config_AY_XXX`.
 
 ### Optional Settings
 Disable feature explainability evaluation by setting:
