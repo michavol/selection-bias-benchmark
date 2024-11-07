@@ -32,7 +32,7 @@ pip install -r requirements.txt
 Update the `config_TY_tcga.yaml` and `config_TY_toy.yaml` files with the appropriate path to the repository code:
 
 ```yaml
-repo_path = PATH_TO_SUBMISSION_CODE
+repo_path = PATH_TO_REPO
 ```
 
 ## Running the Experiments
