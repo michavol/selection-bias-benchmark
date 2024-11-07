@@ -1,0 +1,53 @@
+# Configuration file for simulator for treatment and outcome
+# ==============================================================================
+
+# SIMULATION
+# ==============================================================================
+# Type of simulation
+simulation_type: "TY"
+
+# Higher values correspond to stronger influence of predictive features
+predictive_scale: 1
+
+# Higher values correspond to stronger influence of prognostic features
+prognostic_scale: 1
+
+# Controls the overlap - higher scaling - less overlap
+propensity_scale: 1
+
+# 0 corresponds to completely balanced treatment assignment, 1 leads to strong imbalance, ->inf leads to complete imbalance
+unbalancedness_exp: 0
+
+# 0 correponds to no nonlinearity, 1 to only nonlinearity
+nonlinearity_scale: 0
+
+# Settings regarding important features
+num_pred_features: 20 #for us, 10 for acic, 8 for twins
+num_prog_features: 20
+num_select_features: 10
+feature_type_overlap: "sel_none" # "sel_none", "sel_pred", "sel_prog"
+treatment_feature_overlap: True
+
+# Propensity Settings
+propensity_type: "none_pred" # "none_prog", "none_pred", "pred" 
+alpha: 0
+enforce_balancedness: True
+
+random_feature_selection: False # Order the dataset in such way that they follow: 
+# prog (# = num_prog_features), pred (# = num_T*num_pred_features), select (# = num_T*num_select_feautures) 
+nonlinearity_selection_type: "random"
+
+# Dimensionality of treatments and outcome
+num_T: 2
+dim_Y: 1
+num_binary_outcome: 0 # How many outcomes should be binary
+outcome_unbalancedness_ratio: 0.5 # 0.5 means that half of the outcomes are 0 and half are 1
+standardize_outcome: True # For TY -> for each treatment to get more balanced cates, for T -> over all entries such that biological mech is not lost
+
+# Control settings
+include_control: True
+
+# Noise settings
+noise: True
+noise_std: 0.1
+# ==============================================================================

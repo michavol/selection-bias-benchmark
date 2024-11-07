@@ -1,0 +1,81 @@
+# Description: Configuration file for running any of the experiments
+# All settings can be overwritten by the experiment configuration file, specified for defaults (or on the command line)
+# ==============================================================================
+
+# Defaults
+defaults:
+  - _self_
+  - experiment@_here_: propensity_scale_sensitivity 
+
+# EXPERIMENT SETTINGS 
+# ==============================================================================
+seeds: [0,1,2,3,4] 
+n_splits: 5 # How many splits to perform on data for error bars in results
+model_names: ["Torch_TARNet", "Torch_DragonNet", "Torch_DragonNet_2","Torch_DragonNet_4","Torch_CFRNet_0.01", "Torch_CFRNet_0.001", "Torch_CFRNet_0.0001", "Torch_TLearner","Torch_SLearner", "Torch_XLearner", "EconML_TLearner_Lasso", "EconML_SLearner_Lasso","Torch_ActionNet"]
+# ==============================================================================
+
+# DATA 
+# ==============================================================================
+results_dictionary_prefix: "tcga"
+dataset: "tcga" 
+repo_path: "PATH_TO_SUBMISSION_CODE"
+directory_path: "${repo_path}/data"
+results_path: "${repo_path}/results"
+# ==============================================================================
+
+# Evaluation
+# ==============================================================================
+evaluate_inference: false
+evaluate_explanations: true
+evaluate_prog_explanations: true
+evaluate_in_context_variability: false
+train_baseline_learner: true
+# ==============================================================================
+
+# FEATURE ATTRIBUTION 
+# ==============================================================================
+explainer_limit: 80 # Number of features to be explained for feature attribution-based scores
+explainer_econml: "shap" 
+explainer_torch: "integrated_gradients"
+# ==============================================================================
+
+# COMPUTE
+# ==============================================================================
+n_jobs: -1 # Number of jobs to run in parallel, -1 means using all processors
+# ==============================================================================
+
+# PLOTTING RESULTS
+# ==============================================================================
+# Metrics plots
+plot_results: true
+metrics_to_plot: ["Policy Precision", "Pred Precision", "GT In-context Var", "GT Total Expertise", "GT Prog Expertise", "GT Tre Expertise", "GT Pred Expertise", "RMSE Y0",  "RMSE Y1", "PEHE", "Upd. GT Prog Expertise", "Upd. GT Tre Expertise", "Upd. GT Pred Expertise", "Factual RMSE Y0", "CF RMSE Y0", "Factual RMSE Y1", "CF RMSE Y1", "Factual RMSE", "CF RMSE", 'Normalized F-RMSE', 'Normalized CF-RMSE', 'Normalized PEHE', 'Swap AUROC@all', 'Swap AUPRC@all', "FC PEHE", "FC CF-RMSE", "FC Swap AUROC", "FC Swap AUPRC", 'Pred: Pred features ACC', 'Pred: Prog features ACC', 'Prog: Prog features ACC', 'Prog: Pred features ACC', "GT Expertise Ratio", "GT-ES Pred Expertise Diff", "GT-ES Prog Expertise Diff", "GT-ES Total Expertise Diff", 'T Distribution: Train', 'T Distribution: Test', 'Training Duration']
+
+# Dim reduction plots
+dim_reduction_method: "umap" #"pca"
+dim_reduction_on_important_features: false
+top_k_shap_features: 5
+num_levels: 20
+# ==============================================================================
+
+# LOGGING AND W&B
+# ==============================================================================
+log_level: "INFO" # INFO, DEBUG, WARNING, ERROR, CRITICAL
+debug: false
+verbose: 1
+# ==============================================================================
+
+# MODELS
+# ==============================================================================
+diffpo_path: "${repo_path}/catenets/models/diffpo"
+# ==============================================================================
+
+# MULTIRUN SETTINGS
+# ==============================================================================
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      experiment@_global_: propensity_scale_sensitivity 
+      dataset: str(tcga) 
+      simulator: ty_simulator 
+# ==============================================================================

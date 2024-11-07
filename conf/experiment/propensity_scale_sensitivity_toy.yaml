@@ -1,0 +1,65 @@
+# Configuration file for the propensity sensitivity experiment
+# Also compares the unbalancedness of the treatment assignment
+# ==============================================================================
+
+# Defaults
+defaults:
+  - _self_
+
+  # Simulation settings
+  - /simulator: ty_simulator
+
+  # Model parametrization
+  - /models@EconML_CausalForestDML: EconML_CausalForestDML
+  - /models@EconML_DML: EconML_DML
+  - /models@EconML_DMLOrthoForest: EconML_DMLOrthoForest
+  - /models@EconML_DRLearner: EconML_DRLearner
+  - /models@EconML_DROrthoForest: EconML_DROrthoForest
+  - /models@EconML_ForestDRLearner: EconML_ForestDRLearner
+  - /models@EconML_LinearDML: EconML_LinearDML
+  - /models@EconML_LinearDRLearner: EconML_LinearDRLearner
+  - /models@EconML_SparseLinearDML: EconML_SparseLinearDML
+  - /models@EconML_SparseLinearDRLearner: EconML_SparseLinearDRLearner #EconML_SparseLinearDRLearner
+  - /models@EconML_SLearner_Lasso: EconML_SLearner_Lasso
+  - /models@EconML_TLearner_Lasso: EconML_TLearner_Lasso
+  - /models@EconML_XLearner_Lasso: EconML_XLearner_Lasso
+
+  - /models@Torch_SLearner: Torch_SLearner
+  - /models@Torch_TLearner: Torch_TLearner
+  - /models@Torch_XLearner: Torch_XLearner
+  - /models@Torch_DRLearner: Torch_DRLearner
+  - /models@Torch_RLearner: Torch_RLearner
+  - /models@Torch_TARNet: Torch_TARNet
+  - /models@Torch_DragonNet: Torch_DragonNet
+  - /models@Torch_DragonNet_2: Torch_DragonNet_2
+  - /models@Torch_DragonNet_4: Torch_DragonNet_4
+  - /models@Torch_ULearner: Torch_ULearner
+  - /models@Torch_RALearner: Torch_RALearner
+  - /models@Torch_PWLearner: Torch_PWLearner
+  - /models@Torch_FlexTENet: Torch_FlexTENet
+  - /models@Torch_CRFNet_0_01: Torch_CRFNet_0_01
+  - /models@Torch_CRFNet_0_001: Torch_CRFNet_0_001
+  - /models@Torch_CRFNet_0_0001: Torch_CRFNet_0_0001
+  - /models@Torch_ActionNet: Torch_ActionNet
+
+  - /models@DiffPOLearner: DiffPOLearner
+
+
+# EXPERIMENT AND DATA
+# ==============================================================================
+experiment_name: "propensity_scale_sensitivity"
+# ==============================================================================
+
+# EXPERIMENTAL KNOB
+# ==============================================================================
+# Cohort sizes to be tested
+propensity_scales: [0, 0.25, 0.5, 1, 2, 4, 8, 16]  #[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6] #[0, 0.5, 1.0] #, 1.0]
+unbalancedness_exps: [0] #, 0.2] # If too unbalanced, the model may give an error because of there being too few instances for a certain class
+nonlinearity_scales: [0] #,0.4,0.8]
+propensity_types: ["toy1_nonlinear", "toy3_nonlinear", "toy2_nonlinear", "toy6_nonlinear"] #["toy1_linear", "toy1_nonlinear", "toy2_nonlinear", "toy3_nonlinear", "toy4_nonlinear", "toy5", "toy6_nonlinear", "toy7", "toy8_nonlinear"]
+# propensity_types: ["toy5"]
+n_samples: 1000
+propensity_alpha: 1
+# ==============================================================================
+
+

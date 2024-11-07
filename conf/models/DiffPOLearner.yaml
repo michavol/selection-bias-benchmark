@@ -1,0 +1,32 @@
+#type: args
+# Standard setting: num_step50_lr0.00005_epochs500
+dataset:
+  data_name: "acic2018"
+
+train:
+  epochs: 500 #500
+  batch_size: 256
+  lr: 0.001 #0.00005 default #0.001 in example
+  valid_epoch_interval: 50
+
+diffusion:
+  layers: 4  
+  channels: 64 
+  f_dim: 180
+  cond_dim: 185 #178 #178 # conditional variable dimension - set in code!
+  hidden_dim: 128 
+  side_dim: 33
+  nheads: 2 #2 in example, 4 default
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 100
+  schedule: "quad"
+  mixed: False
+
+model:
+  is_unconditional: 0
+  timeemb: 32
+  featureemb: 32 #16
+  target_strategy: "random"
+  mixed: False

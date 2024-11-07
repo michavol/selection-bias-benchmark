@@ -1,0 +1,10 @@
+# Config for the Torch_XLearner model
+# ==============================================================================
+
+# Model parameters 
+n_layers_out: 2
+n_units_out: 100
+batch_size: 256 #32
+n_iter: 2000 
+batch_norm: false
+nonlin: "relu"

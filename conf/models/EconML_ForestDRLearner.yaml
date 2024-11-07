@@ -1,0 +1,27 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+model_regression: 'auto'
+model_propensity: 'auto'
+featurizer: null
+min_propensity: 1e-06
+categories: 'auto'
+cv: 5
+mc_iters: null
+mc_agg: 'mean'
+n_estimators: 1000
+max_depth: null
+min_samples_split: 5
+min_samples_leaf: 5
+min_weight_fraction_leaf: 0.0
+max_features: 'auto'
+min_impurity_decrease: 0.0
+max_samples: 0.45
+min_balancedness_tol: 0.45
+honest: True
+subforest_size: 4
+verbose: 0
+allow_missing: False
+use_ray: False
+ray_remote_func_options: null

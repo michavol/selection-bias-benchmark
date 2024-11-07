@@ -1,0 +1,17 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+model_propensity: 'auto'
+model_regression: 'auto'
+featurizer: null
+fit_cate_intercept: True
+min_propensity: 1e-06
+categories: 'auto'
+cv: 5
+mc_iters: null
+mc_agg: 'mean'
+allow_missing: False
+enable_federation: False
+use_ray: False
+ray_remote_func_options: null

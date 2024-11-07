@@ -1,0 +1,7 @@
+# Config for the EconML_SparseLinearDML model
+# -> Currently with Lasso as propensity and final models
+
+# Model parameters 
+# overall_model
+categories: 'auto'
+allow_missing: False

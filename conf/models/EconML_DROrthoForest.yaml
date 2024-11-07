@@ -1,0 +1,19 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+n_trees: 500
+min_leaf_size: 10
+max_depth: 10
+subsample_ratio: 0.7
+bootstrap: False
+lambda_reg: 0.01
+# propensity_model: LogisticRegression(penalty: 'l1', solver: 'saga')
+# model_Y: <econml.sklearn_extensions.linear_model.WeightedLassoCVWrapper object>
+propensity_model_final: null
+model_Y_final: null
+categories: 'auto'
+backend: 'loky'
+verbose: 3
+batch_size: 'auto'
+allow_missing: False

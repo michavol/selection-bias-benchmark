@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Directories
+workspace
+multirun
+results
+
+catenets/datasets/data
+catenets/models/diffpo/data/*
+catenets/models/diffpo/save
+catenets/models/diffpo/save_model
+archive 
+
+syn_models
+slurm_jobs
+outputs
+checkpoints
+evaluation_results
+sync_folder
+outputs 
+checkpoints
+multirun
+
+# VENVs
+.venv

@@ -1,0 +1,18 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+model_y: 'auto'
+model_t: 'auto'
+model_final: 'auto'
+featurizer: null
+treatment_featurizer: null
+fit_cate_intercept: True
+linear_first_stages: 'deprecated'
+categories: 'auto'
+cv: 5
+mc_iters: null
+mc_agg: 'mean'
+allow_missing: False
+use_ray: False
+ray_remote_func_options: null

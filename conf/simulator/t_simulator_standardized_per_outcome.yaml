@@ -1,0 +1,35 @@
+# Configuration file for simulator for treatment and outcome
+# ==============================================================================
+
+# SIMULATION
+# ==============================================================================
+# Type of simulation
+simulation_type: "T"
+
+# Controls the overlap - higher scaling - less overlap
+propensity_scale: 100
+
+# 0 corresponds to completely balanced treatment assignment, 1 leads to strong imbalance, ->inf leads to complete imbalance
+unbalancedness_exp: 0
+
+# 0 correponds to no nonlinearity, 1 to only nonlinearity
+nonlinearity_scale: 0
+
+# Settings regarding important features
+num_select_features: 10
+treatment_feature_overlap: True
+random_feature_selection: False
+nonlinearity_selection_type: "random"
+
+# Propensity Settings
+propensity_type: "none_pred" # "selective", "prog", "pred" 
+alpha: 1
+enforce_balancedness: True
+
+# Dimensionality of treatments and outcome
+num_T: 2 # Is set by the number of treatments given in the main config
+dim_Y: 1
+num_binary_outcome: 0 #Set this depending on what type the given output is. TODO: Should be implemented to be automatically inferred.
+standardize_outcome: True
+standardize_per_outcome: True
+# ==============================================================================

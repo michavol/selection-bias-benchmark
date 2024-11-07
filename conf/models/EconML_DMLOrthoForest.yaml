@@ -1,0 +1,22 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+n_trees: 500
+min_leaf_size: 10
+max_depth: 10
+subsample_ratio: 0.7
+bootstrap: False
+lambda_reg: 0.01
+model_T: 'auto'
+model_Y: <econml.sklearn_extensions.linear_model.WeightedLassoCVWrapper object>
+model_T_final: null
+model_Y_final: null
+global_residualization: False
+global_res_cv: 5
+treatment_featurizer: null
+categories: 'auto'
+backend: 'loky'
+verbose: 3
+batch_size: 'auto'
+allow_missing: False

@@ -1,0 +1,26 @@
+# Config for the EconML_SparseLinearDRLearner model
+# https://econml.azurewebsites.net/_modules/econml/dr/_drlearner.html#SparseLinearDRLearner
+# ==============================================================================
+
+# Model parameters
+# ==============================================================================
+# model_propensity: 'linear'
+# model_regression: 'linear'
+featurizer: null
+fit_cate_intercept: False
+alpha: 'auto'
+n_alphas: 100
+alpha_cov: 'auto'
+n_alphas_cov: 10
+max_iter: 5000
+tol: 0.001
+n_jobs: null
+min_propensity: 1e-01 #1e-06
+categories: 'auto'
+cv: 5
+mc_iters: null
+mc_agg: 'mean'
+allow_missing: False
+use_ray: False
+ray_remote_func_options: null
+# ==============================================================================

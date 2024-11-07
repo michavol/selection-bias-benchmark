@@ -1,0 +1,33 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+model_y: 'auto'
+model_t: 'auto'
+featurizer: null
+treatment_featurizer: null
+categories: 'auto'
+cv: 4
+mc_iters: null
+mc_agg: 'mean'
+drate: True
+n_estimators: 100
+criterion: 'mse'
+max_depth: null
+min_samples_split: 10
+min_samples_leaf: 5
+min_weight_fraction_leaf: 0.0
+min_var_fraction_leaf: null
+min_var_leaf_on_val: False
+max_features: 'auto'
+min_impurity_decrease: 0.0
+max_samples: 0.45
+min_balancedness_tol: 0.45
+honest: True
+inference: True
+fit_intercept: True
+subforest_size: 4
+verbose: 0
+allow_missing: False
+use_ray: False
+ray_remote_func_options: null

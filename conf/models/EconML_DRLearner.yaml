@@ -1,0 +1,19 @@
+# Config for the EconML_SparseLinearDML model
+# : 
+
+# Model parameters 
+model_propensity: 'auto'
+model_regression: 'auto'
+# model_final: StatsModelsLinearRegression()
+# discrete_outcome: False
+multitask_model_final: False
+featurizer: null
+min_propensity: 1e-06
+categories: 'auto'
+cv: 5
+mc_iters: null
+mc_agg: 'mean'
+# random_state: null
+allow_missing: False
+use_ray: False
+ray_remote_func_options: null
