@@ -1,7 +1,7 @@
 
 # Learning Personalized Treatment Decisions in Precision Medicine
 
-This repository accompanies the paper *Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*, accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification.
+This repository accompanies the paper *Learning Personalized Treatment Decisions in Precision Medicine: Disentangling Treatment Assignment Bias in Counterfactual Outcome Prediction and Biomarker Identification*, accepted at the ML4H 2024 conference. It provides code for replicating experiments, analyzing treatment assignment biases, and exploring counterfactual outcome prediction and biomarker identification. 
 
 ## Overview
 
@@ -15,7 +15,7 @@ Precision medicine promises tailored treatment strategies but faces challenges d
 
 
 ## Setup and Installation
-
+If you have any questions about the implementation or content of the paper, feel free to reach out to me (michavol@ethz.ch).
 Ensure you are using Python 3.10.12. Follow these steps to set up the environment:
 
 ```bash
